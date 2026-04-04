@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suporte Técnico — Abertura de Chamado</title>
+<title>Abertura de Chamado | DGUEDES SERVIÇOS</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0d13;
-    --surface: #111520;
-    --surface2: #161b28;
-    --border: #1e2535;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --surface2: #f1f5f9;
+    --border: #e2e8f0;
     --border-active: #2e7dff;
     --accent: #2e7dff;
-    --accent2: #00e5a0;
-    --text: #e8eaf0;
-    --text2: #7a8299;
-    --text3: #4a5168;
-    --danger: #ff4d6a;
-    --warning: #ffab40;
-    --success: #00e5a0;
-    --radius: 10px;
+    --accent2: #10b981;
+    --text: #0f172a;
+    --text2: #475569;
+    --text3: #64748b;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --success: #10b981;
+    --radius: 12px;
     --mono: 'JetBrains Mono', monospace;
     --sans: 'Syne', sans-serif;
   }
@@ -42,8 +42,8 @@
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(rgba(46,125,255,.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(46,125,255,.03) 1px, transparent 1px);
+      linear-gradient(rgba(46,125,255,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(46,125,255,.07) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
     z-index: 0;
@@ -56,39 +56,25 @@
     z-index: 1;
   }
 
-  /* Header */
+  /* Header - Atualizado para centralizar e dimensionar o logo */
   .header {
     margin-bottom: 2.5rem;
     opacity: 0;
     animation: fadeUp .6s ease forwards;
-  }
-
-  .logo-row {
+    text-align: center; /* Centraliza todo o texto */
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens flexíveis */
   }
 
-  .logo-icon {
-    width: 36px;
-    height: 36px;
-    background: var(--accent);
-    border-radius: 8px;
-    display: grid;
-    place-items: center;
-    flex-shrink: 0;
-  }
-
-  .logo-icon svg { width: 18px; height: 18px; fill: #fff; }
-
-  .logo-name {
-    font-family: var(--mono);
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    letter-spacing: .08em;
-    text-transform: uppercase;
+  /* CSS para a logomarca da DGUEDES SERVIÇOS */
+  .header-logo-img {
+    max-height: 140px; /* Altura máxima para legibilidade */
+    width: auto;
+    margin-bottom: 2.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .header h1 {
@@ -137,6 +123,7 @@
     margin-bottom: 1rem;
     opacity: 0;
     animation: fadeUp .6s ease forwards;
+    box-shadow: 0 10px 24px rgba(15,23,42,.06);
   }
 
   .card:nth-child(1) { animation-delay: .15s; }
@@ -204,6 +191,10 @@
     box-shadow: 0 0 0 3px rgba(46,125,255,.15);
   }
 
+  input.valid, select.valid, textarea.valid {
+    border-color: var(--success);
+  }
+
   input.error, select.error, textarea.error {
     border-color: var(--danger);
     box-shadow: 0 0 0 3px rgba(255,77,106,.12);
@@ -221,7 +212,7 @@
   textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
 
   select { cursor: pointer; }
-  select option { background: #1a1f2e; }
+  select option { background: #ffffff; color: #0f172a; }
 
   /* Phone hint */
   .hint {
@@ -466,8 +457,8 @@
 
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-track { background: var(--surface2); }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
 
   /* Character counter */
   .char-count {
@@ -484,19 +475,12 @@
 
 <div class="container">
 
-  <!-- Header -->
   <div class="header">
-    <div class="logo-row">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-      </div>
-      <span class="logo-name">Suporte Técnico</span>
-    </div>
-    <h1>Abrir <span>Chamado</span><br>de Atendimento</h1>
-    <p>Preencha as informações abaixo para registrar sua solicitação. Retornaremos pelo WhatsApp informado.</p>
+    <img src="d_guedes_servicos_logo.png" alt="Logomarca DGUEDES SERVIÇOS — Informática, Elétrica, Telefonia, Câmeras" class="header-logo-img">
+    <h1>Abertura de Chamado Técnico</h1>
+    <p>Preencha as informações abaixo para registrar sua solicitação para a DGUEDES SERVIÇOS. Retornaremos pelo WhatsApp informado.</p>
   </div>
 
-  <!-- Step dots -->
   <div class="steps" id="steps">
     <div class="step-dot active" id="s1"></div>
     <div class="step-dot" id="s2"></div>
@@ -506,7 +490,6 @@
 
   <form id="chamadoForm" novalidate>
 
-    <!-- Card 1: Identificação -->
     <div class="card" id="card1">
       <div class="card-label">01 — Identificação</div>
       <div class="grid2">
@@ -526,29 +509,27 @@
         <div class="field">
           <label>WhatsApp / Telefone <span class="req">*</span></label>
           <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" maxlength="15">
-          <span class="hint">Com DDD, somente números</span>
-          <span class="error-msg" id="err-telefone">⚠ Informe um telefone válido</span>
+          <span class="hint">Formato: (DDD) 91234-5678 — somente números</span>
+          <span class="error-msg" id="err-telefone">⚠ Informe um telefone válido (mínimo 10 dígitos)</span>
         </div>
         <div class="field">
           <label>E-mail</label>
           <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email">
-          <span class="error-msg" id="err-email">⚠ E-mail inválido</span>
+          <span class="error-msg" id="err-email">⚠ E-mail inválido (ex: nome@dominio.com)</span>
         </div>
       </div>
     </div>
 
-    <!-- Card 2: Localização -->
     <div class="card" id="card2">
       <div class="card-label">02 — Localização</div>
       <div class="field">
         <label>Endereço / Bairro / Cidade <span class="req">*</span></label>
         <input type="text" id="endereco" name="endereco" placeholder="Ex: Av. Paulista, 1000 — Bela Vista — São Paulo/SP">
-        <span class="error-msg" id="err-endereco">⚠ Informe o endereço</span>
+        <span class="error-msg" id="err-endereco">⚠ Informe o endereço completo ou pelo menos cidade/estado</span>
       </div>
       <p class="address-hint">Necessário para atendimentos presenciais. Para suporte remoto, apenas cidade e estado.</p>
     </div>
 
-    <!-- Card 3: Chamado -->
     <div class="card" id="card3">
       <div class="card-label">03 — Detalhes do Chamado</div>
       <div class="field" style="margin-bottom:1rem">
@@ -562,7 +543,7 @@
           <option value="Câmeras de Segurança / CFTV">📷 Câmeras de Segurança / CFTV</option>
           <option value="Outro">🔧 Outro</option>
         </select>
-        <span class="error-msg" id="err-area">⚠ Selecione a área</span>
+        <span class="error-msg" id="err-area">⚠ Selecione a área do problema</span>
       </div>
 
       <div class="field" style="margin-bottom:1rem">
@@ -578,7 +559,7 @@
       </div>
 
       <div class="field">
-        <label>Anexar foto / print de erro</label>
+        <label>Anexar foto / print de erro (opcional)</label>
         <div class="upload-zone" id="uploadZone">
           <input type="file" id="arquivo" name="arquivo" accept="image/*,.pdf" onchange="handleFile(this)">
           <div id="uploadDefault">
@@ -596,13 +577,12 @@
       </div>
     </div>
 
-    <!-- Card 4: Urgência -->
     <div class="card" id="card4">
       <div class="card-label">04 — Urgência</div>
       <div class="priority-group">
 
         <label>
-          <input class="priority-label" type="radio" name="urgencia" value="Baixa — Dúvida ou ajuste simples" required>
+          <input class="priority-label" type="radio" name="urgencia" value="Baixa — Dúvida ou ajuste simples">
           <div class="priority-pill" style="--pill-color:#00e5a0;--pill-rgb:0,229,160">
             <div class="pill-dot"></div>
             <div>
@@ -646,7 +626,7 @@
         </label>
 
       </div>
-      <span class="error-msg" id="err-urgencia" style="margin-top:8px">⚠ Selecione a urgência</span>
+      <span class="error-msg" id="err-urgencia" style="margin-top:8px">⚠ Selecione o nível de urgência</span>
     </div>
 
     <button type="submit" class="submit-btn" id="submitBtn">
@@ -661,7 +641,6 @@
 
   </form>
 
-  <!-- Success -->
   <div class="success-screen" id="successScreen">
     <div class="success-icon">
       <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -675,14 +654,19 @@
 
 </div>
 
-<!-- Toast -->
 <div class="toast" id="toast"></div>
 
 <script>
-  // ── CONFIG — altere apenas esta URL ────────────────────────────────────────
-  // Após publicar o Apps Script como Web App, cole a URL aqui:
+  // ============================================================
+  // CONFIGURAÇÃO DO GOOGLE APPS SCRIPT
+  // ============================================================
+  // ⚠️ ATENÇÃO: Substitua pela URL do seu Web App do Google Apps Script
+  // Após publicar o script como Web App, cole a URL completa aqui:
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3dmbAU1N-OL0ZJ_b9E14IIwrKJ-k67D-afBeU4M0qfwq2_W7EUEH-dX0H6T5BanoFxQ/exec';
-  // ──────────────────────────────────────────────────────────────────────────
+  
+  // Se estiver testando localmente sem o Apps Script, altere para true
+  const DEMO_MODE = false; // Mude para false quando tiver a URL real do Apps Script
+  // ============================================================
 
   // Mascara de telefone
   document.getElementById('telefone').addEventListener('input', function(e) {
@@ -692,7 +676,54 @@
     else
       v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
     e.target.value = v.replace(/-$/, '');
+    validateField(e.target);
     updateSteps();
+  });
+
+  // Validação em tempo real para todos os campos
+  function validateField(field) {
+    const id = field.id;
+    let isValid = true;
+    
+    switch(id) {
+      case 'nome':
+        isValid = field.value.trim().length >= 2;
+        break;
+      case 'empresa':
+        isValid = field.value.trim().length >= 1;
+        break;
+      case 'telefone':
+        isValid = field.value.replace(/\D/g,'').length >= 10;
+        break;
+      case 'email':
+        if (!field.value.trim()) isValid = true;
+        else isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
+        break;
+      case 'endereco':
+        isValid = field.value.trim().length >= 3;
+        break;
+      case 'area':
+        isValid = field.value !== '';
+        break;
+      case 'descricao':
+        isValid = field.value.trim().length >= 20;
+        break;
+      default:
+        return;
+    }
+    
+    field.classList.toggle('error', !isValid);
+    field.classList.toggle('valid', isValid && field.value.trim());
+    const errorMsg = document.getElementById(`err-${id}`);
+    if (errorMsg) errorMsg.classList.toggle('show', !isValid && field.value.trim());
+    
+    return isValid;
+  }
+
+  // Adicionar validação em tempo real
+  document.querySelectorAll('#nome, #empresa, #telefone, #email, #endereco, #area, #descricao').forEach(field => {
+    field.addEventListener('input', () => validateField(field));
+    field.addEventListener('blur', () => validateField(field));
   });
 
   // Contador de caracteres
@@ -706,29 +737,46 @@
 
   // Atualiza step dots conforme preenche
   function updateSteps() {
-    const f = ['nome','empresa','telefone'];
-    const s1 = f.every(id => document.getElementById(id).value.trim());
+    const s1 = document.getElementById('nome').value.trim() && 
+               document.getElementById('empresa').value.trim() && 
+               document.getElementById('telefone').value.replace(/\D/g,'').length >= 10;
     const s2 = !!document.getElementById('endereco').value.trim();
     const s3 = document.getElementById('area').value && document.getElementById('descricao').value.length >= 20;
     const s4 = !!document.querySelector('input[name="urgencia"]:checked');
 
-    ['s1','s2','s3','s4'].forEach((id, i) => {
+    const steps = ['s1', 's2', 's3', 's4'];
+    const filled = [s1, s2, s3, s4];
+    
+    steps.forEach((id, i) => {
       const dot = document.getElementById(id);
-      const filled = [s1, s2, s3, s4][i];
-      dot.className = 'step-dot ' + (filled ? 'done' : (i === 0 ? 'active' : ''));
+      dot.className = 'step-dot';
+      if (filled[i]) dot.classList.add('done');
+      else if (i === 0 || (i > 0 && filled[i-1])) dot.classList.add('active');
     });
   }
 
   document.querySelectorAll('input, select, textarea').forEach(el => {
-    el.addEventListener('change', updateSteps);
-    el.addEventListener('input', updateSteps);
+    if (!['radio', 'file'].includes(el.type)) {
+      el.addEventListener('change', updateSteps);
+      el.addEventListener('input', updateSteps);
+    }
   });
 
   // Upload
   function handleFile(input) {
     if (!input.files.length) return;
     const f = input.files[0];
-    if (f.size > 10 * 1024 * 1024) { showToast('Arquivo muito grande. Máximo 10 MB.'); input.value = ''; return; }
+    const validTypes = ['image/png', 'image/jpeg', 'image/jpg', 'application/pdf'];
+    if (!validTypes.includes(f.type)) {
+      showToast('Formato inválido. Use PNG, JPG ou PDF.');
+      input.value = '';
+      return;
+    }
+    if (f.size > 10 * 1024 * 1024) { 
+      showToast('Arquivo muito grande. Máximo 10 MB.'); 
+      input.value = ''; 
+      return; 
+    }
     document.getElementById('uploadDefault').style.display = 'none';
     document.getElementById('uploadPreview').classList.add('show');
     document.getElementById('previewName').textContent = f.name;
@@ -737,28 +785,32 @@
   const zone = document.getElementById('uploadZone');
   zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag'); });
   zone.addEventListener('dragleave', () => zone.classList.remove('drag'));
-  zone.addEventListener('drop', e => { e.preventDefault(); zone.classList.remove('drag'); const fi = document.getElementById('arquivo'); fi.files = e.dataTransfer.files; handleFile(fi); });
+  zone.addEventListener('drop', e => { 
+    e.preventDefault(); 
+    zone.classList.remove('drag'); 
+    const fi = document.getElementById('arquivo'); 
+    fi.files = e.dataTransfer.files; 
+    handleFile(fi); 
+  });
 
-  // Validação
+  // Validação completa
   function validate() {
     let ok = true;
-    const rules = [
-      { id: 'nome', err: 'err-nome', check: v => v.trim().length >= 2 },
-      { id: 'empresa', err: 'err-empresa', check: v => v.trim().length >= 1 },
-      { id: 'telefone', err: 'err-telefone', check: v => v.replace(/\D/g,'').length >= 10 },
-      { id: 'email', err: 'err-email', check: v => !v || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
-      { id: 'endereco', err: 'err-endereco', check: v => v.trim().length >= 3 },
-      { id: 'area', err: 'err-area', check: v => v !== '' },
-      { id: 'descricao', err: 'err-descricao', check: v => v.trim().length >= 20 },
-    ];
-
-    rules.forEach(r => {
-      const el = document.getElementById(r.id);
-      const valid = r.check(el.value);
-      el.classList.toggle('error', !valid);
-      document.getElementById(r.err).classList.toggle('show', !valid);
+    const fields = ['nome', 'empresa', 'telefone', 'endereco', 'area', 'descricao'];
+    
+    fields.forEach(id => {
+      const el = document.getElementById(id);
+      const valid = validateField(el);
       if (!valid) ok = false;
     });
+    
+    // Email validation (optional)
+    const email = document.getElementById('email');
+    if (email.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      email.classList.add('error');
+      document.getElementById('err-email').classList.add('show');
+      ok = false;
+    }
 
     const urgencia = document.querySelector('input[name="urgencia"]:checked');
     const errUrg = document.getElementById('err-urgencia');
@@ -771,7 +823,10 @@
   // Submit
   document.getElementById('chamadoForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    if (!validate()) { showToast('Preencha os campos obrigatórios.'); return; }
+    if (!validate()) { 
+      showToast('Preencha todos os campos obrigatórios corretamente.'); 
+      return; 
+    }
 
     const btn = document.getElementById('submitBtn');
     btn.disabled = true;
@@ -787,32 +842,37 @@
     formData.append('equipamento', document.getElementById('equipamento').value.trim());
     formData.append('descricao', document.getElementById('descricao').value.trim());
     formData.append('urgencia', document.querySelector('input[name="urgencia"]:checked').value);
+    formData.append('timestamp', new Date().toISOString());
+    
     const arq = document.getElementById('arquivo').files[0];
     if (arq) formData.append('arquivo', arq);
 
     try {
-      const resp = await fetch(APPS_SCRIPT_URL, { method: 'POST', body: formData });
-      const json = await resp.json();
-      if (json.status === 'ok') {
-        document.getElementById('chamadoForm').style.display = 'none';
-        document.getElementById('steps').style.display = 'none';
-        document.getElementById('successScreen').classList.add('show');
-        document.getElementById('ticketId').textContent = '# ' + json.ticket;
-        document.querySelector('.header').style.display = 'none';
-      } else { throw new Error(json.msg || 'Erro'); }
-    } catch (err) {
-      // Dev mode: simula sucesso se URL não configurada
-      if (APPS_SCRIPT_URL === 'COLE_AQUI_A_URL_DO_APPS_SCRIPT') {
-        document.getElementById('chamadoForm').style.display = 'none';
-        document.getElementById('steps').style.display = 'none';
-        document.getElementById('successScreen').classList.add('show');
-        document.getElementById('ticketId').textContent = '# DEMO-' + Date.now().toString().slice(-6);
-        document.querySelector('.header').style.display = 'none';
+      let response;
+      if (DEMO_MODE || APPS_SCRIPT_URL === 'COLE_AQUI_A_URL_DO_APPS_SCRIPT') {
+        // Modo demo - simula envio
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        response = { status: 'ok', ticket: 'DEMO-' + Date.now().toString().slice(-8) };
       } else {
-        showToast('Erro ao enviar. Tente novamente.');
-        btn.disabled = false;
-        btn.classList.remove('loading');
+        const resp = fetch(APPS_SCRIPT_URL, { method: 'POST', body: formData });
+        const finalResp = await resp;
+        response = await finalResp.json();
       }
+      
+      if (response.status === 'ok') {
+        document.getElementById('chamadoForm').style.display = 'none';
+        document.getElementById('steps').style.display = 'none';
+        document.getElementById('successScreen').classList.add('show');
+        document.getElementById('ticketId').textContent = '# ' + response.ticket;
+        document.querySelector('.header').style.display = 'none';
+      } else { 
+        throw new Error(response.msg || 'Erro ao enviar'); 
+      }
+    } catch (err) {
+      console.error('Erro:', err);
+      showToast('Erro ao enviar chamado. Tente novamente.');
+      btn.disabled = false;
+      btn.classList.remove('loading');
     }
   });
 
@@ -821,16 +881,27 @@
     document.getElementById('chamadoForm').style.display = 'block';
     document.getElementById('steps').style.display = 'flex';
     document.getElementById('successScreen').classList.remove('show');
-    document.querySelector('.header').style.display = 'block';
+    document.querySelector('.header').style.display = 'flex'; /* Voltar para flex */
     document.getElementById('uploadDefault').style.display = 'block';
     document.getElementById('uploadPreview').classList.remove('show');
+    
+    // Limpar classes de erro
     document.querySelectorAll('.error').forEach(e => e.classList.remove('error'));
+    document.querySelectorAll('.valid').forEach(e => e.classList.remove('valid'));
     document.querySelectorAll('.error-msg').forEach(e => e.classList.remove('show'));
+    
     const btn = document.getElementById('submitBtn');
     btn.disabled = false;
     btn.classList.remove('loading');
-    ['s1','s2','s3','s4'].forEach((id,i) => document.getElementById(id).className = 'step-dot' + (i===0?' active':''));
+    
+    // Resetar steps
+    const steps = ['s1', 's2', 's3', 's4'];
+    steps.forEach((id, i) => {
+      document.getElementById(id).className = 'step-dot' + (i === 0 ? ' active' : '');
+    });
+    
     document.getElementById('char-desc').textContent = '0 / 1000 caracteres';
+    updateSteps();
   }
 
   function showToast(msg) {
@@ -839,6 +910,21 @@
     t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 3500);
   }
+  
+  // Inicializar radios para clique nas pills
+  document.querySelectorAll('.priority-pill').forEach((pill, index) => {
+    const radio = pill.parentElement.querySelector('input[type="radio"]');
+    if (radio) {
+      pill.addEventListener('click', () => {
+        radio.checked = true;
+        updateSteps();
+        document.getElementById('err-urgencia')?.classList.remove('show');
+      });
+      radio.addEventListener('change', () => {
+        if (radio.checked) updateSteps();
+      });
+    }
+  });
 </script>
 </body>
 </html>
